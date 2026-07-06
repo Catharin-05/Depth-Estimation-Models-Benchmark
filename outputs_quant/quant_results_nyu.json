@@ -1,0 +1,12 @@
+{
+  "zoedepth_nk": {
+    "name": "ZoeDepth (ZoeD_NK)",
+    "params_M": 345.0,
+    "is_metric": true,
+    "aggregate": {
+      "error": "no valid images"
+    },
+    "mean_latency_ms": null,
+    "per_image": []
+  }
+}

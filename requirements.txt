@@ -1,0 +1,33 @@
+# Core
+torch>=2.1
+torchvision>=0.16
+numpy
+pillow
+matplotlib
+
+# transformers-hosted models (DPT, Depth Anything V2, Depth Pro, ZoeDepth-hf)
+transformers>=4.45
+timm>=0.9.12          # needed by MiDaS/DPT backbones
+
+# Marigold
+diffusers>=0.31
+accelerate
+
+# UniDepth V2 / Metric3D v2 / PatchFusion are pulled live via torch.hub from
+# their GitHub repos at run time (see each models/*.py docstring) -- no
+# extra pip package required, but each repo has its OWN requirements.txt
+# (xformers, open3d, etc.) that torch.hub does not auto-install. If a
+# torch.hub.load() call fails with a missing-module error, `git clone` that
+# repo and `pip install -r requirements.txt` from it directly.
+
+# LeReS (aim-uofa/AdelaiDepth) has no pip/hub packaging at all -- clone the
+# repo manually per models/leres.py docstring.
+
+# Public dataset loading (NYU Depth V2 / KITTI Eigen split)
+datasets>=2.19
+h5py          # only needed if you fall back to the raw NYU .mat file
+
+# Optional, for nicer / interactive 3D point-cloud viewing instead of the
+# static matplotlib renders in common/utils.py:
+# open3d
+# plotly
