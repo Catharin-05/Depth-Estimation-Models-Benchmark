@@ -1,4 +1,4 @@
-# Monocular Depth Estimation Shootout — Code
+# Monocular Depth Estimation
 
 Benchmarks 10 depth models (MiDaS, DPT, ZoeDepth, Depth Anything V2, Depth Pro,
 UniDepth V2, Metric3D v2, Marigold, PatchFusion, LeReS) on your own images:
